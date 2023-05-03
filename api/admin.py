@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Meal, Rating
 # Register your models here.
 class Mealadmin(admin.ModelAdmin):
+    list_display = ["id", "title", "description"]
     list_filter = ["title", "description"]
     search_fields = ["title", "description"]
 
