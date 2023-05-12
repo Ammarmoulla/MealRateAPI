@@ -62,7 +62,7 @@ SIMPLE_JWT = {
 
 
 GRAPHENE = {
-    'SCHEMA': 'api.schema.schema' # Where your Graphene schema lives
+    'SCHEMA': 'core.schema.schema' # Where your Graphene schema lives
 }
 
 
