@@ -9,6 +9,7 @@ decorator==5.1.1
 Django==4.1.7
 django-cors-headers==3.14.0
 django-filter==23.2
+django-graphql-jwt==0.3.4
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
 drf-spectacular==0.26.2
