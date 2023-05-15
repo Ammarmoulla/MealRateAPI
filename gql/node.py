@@ -1,3 +1,4 @@
+from base64 import standard_b64decode
 from graphene import relay
 from graphene_django import DjangoObjectType
 from django.contrib.auth.models import User
@@ -32,3 +33,9 @@ class RatingNode(DjangoObjectType):
             'meal__title': ['exact', 'icontains'],
         }
         interfaces = (relay.Node, )
+
+
+def get_node_id(id_base64, node):
+    _type, _id = standard_b64decode(id_base64.encode('utf-8')).decode('utf-8').split(':')
+    assert _type == node._meta.name
+    return _id
